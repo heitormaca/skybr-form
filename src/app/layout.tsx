@@ -3,6 +3,7 @@ import {
   mantineHtmlProps,
   MantineProvider,
 } from '@mantine/core'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { theme } from '@/configs/mantine'
 import QueryClientProvider from '@/providers'
@@ -32,7 +33,10 @@ export default function RootLayout({
       </head>
       <body>
         <QueryClientProvider>
-          <MantineProvider theme={theme}>{children}</MantineProvider>
+          <MantineProvider theme={theme}>
+            {children}
+            <SpeedInsights />
+          </MantineProvider>
         </QueryClientProvider>
       </body>
     </html>
