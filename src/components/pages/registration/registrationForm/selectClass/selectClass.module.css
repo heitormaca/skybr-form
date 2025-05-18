@@ -1,0 +1,16 @@
+.input_base {
+  &[data-error] {
+    > div > button {
+      border: calc(0.0625rem * var(--mantine-scale)) solid
+        var(--mantine-color-error);
+
+      > span {
+        color: var(--mantine-color-error);
+      }
+    }
+
+    svg {
+      color: var(--combobox-chevron-color, var(--mantine-color-error));
+    }
+  }
+}

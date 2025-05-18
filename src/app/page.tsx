@@ -1,7 +1,9 @@
-export default function Home() {
+import Registration from '@/components/pages'
+
+export default function RegistrationPage() {
   return (
-    <div>
-      <main>SkyBR</main>
-    </div>
+    <main>
+      <Registration />
+    </main>
   )
 }
