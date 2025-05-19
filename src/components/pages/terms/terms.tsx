@@ -4,7 +4,7 @@ import { Anchor, Container, List, Stack, Text, Title } from '@mantine/core'
 
 const Terms: React.FC = () => {
   return (
-    <Container py="md" style={{ overflowX: 'hidden' }}>
+    <Container py="md">
       <Stack align="center">
         <Title ta="center" order={1}>
           📄 Termos de Uso e Política de Privacidade
