@@ -14,7 +14,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 
 import { RegistrationFormPropsValues } from '../registrationForm.schema'
-import { selectValues } from './selectClass.constants'
+import { selectData } from './selectClass.constants'
 
 import type { UseFormReturnType } from '@mantine/form'
 
@@ -33,12 +33,10 @@ const SelectClass: React.FC<SelectClassProps> = ({ form }) => {
     form.getInputProps('class_name').defaultValue,
   )
 
-  console.log('value: ', value)
-
-  const selected = selectValues.find((g) => g.value === value)!
+  const selected = selectData.find((g) => g.value === value)!
   const isError = form.getInputProps('class_name').error
 
-  const options = selectValues.map((item) => (
+  const options = selectData.map((item) => (
     <Combobox.Option value={item.value} key={item.value}>
       <Group gap="xs">
         {item.value === value && <CheckIcon size={12} />}
