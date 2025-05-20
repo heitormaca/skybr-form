@@ -17,6 +17,7 @@ export const useRegistrationForm = () => {
       class_name: '',
       game_availability: [],
       '0800_availability': '',
+      accept_rules: false,
       accept_terms: false,
     },
     validate: zodResolver(registrationFormSchema),

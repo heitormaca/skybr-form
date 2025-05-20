@@ -1,4 +1,4 @@
-const selectValues = [
+const selectData = [
   { label: 'Guerreiro', value: 'WR', icon: '/assets/icons/wr.png' },
   { label: 'Mago', value: 'MG', icon: '/assets/icons/mg.png' },
   { label: 'Bárbaro', value: 'WB', icon: '/assets/icons/wb.png' },
@@ -7,4 +7,4 @@ const selectValues = [
   { label: 'Arqueiro', value: 'EA', icon: '/assets/icons/ea.png' },
 ]
 
-export { selectValues }
+export { selectData }
