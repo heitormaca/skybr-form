@@ -2,14 +2,18 @@ import { Paper, SimpleGrid, Title } from '@mantine/core'
 
 import type { FormSectionProps } from './formSection.types'
 
-const FormSection: React.FC<FormSectionProps> = ({ title, children }) => {
+const FormSection: React.FC<FormSectionProps> = ({
+  title,
+  children,
+  columns,
+}) => {
   return (
     <div>
       <Title order={2} mb="sm">
         {title}
       </Title>
       <Paper withBorder p="md">
-        <SimpleGrid cols={{ xs: 2 }}>{children}</SimpleGrid>
+        <SimpleGrid cols={columns}>{children}</SimpleGrid>
       </Paper>
     </div>
   )
