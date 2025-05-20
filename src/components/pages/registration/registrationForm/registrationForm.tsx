@@ -31,10 +31,17 @@ const RegistrationForm: React.FC = () => {
   return (
     <Box component="form" w="100%" onSubmit={form.onSubmit(handleSubmit)}>
       <SimpleGrid cols={1} w="100%" verticalSpacing="md">
-        <FormSection title="Informações pessoais">
+        <FormSection title="Informações pessoais" columns={{ xs: 2, sm: 3 }}>
+          <TextInput
+            withAsterisk
+            label="Nome completo"
+            placeholder="Insira o seu nome completo"
+            key={form.key('complete_name')}
+            {...form.getInputProps('complete_name')}
+          />
           <Input.Wrapper
             withAsterisk
-            label="Contato do WhatsApp"
+            label="WhatsApp"
             error={form.getInputProps('cellphone').error}
           >
             <Input
@@ -47,13 +54,13 @@ const RegistrationForm: React.FC = () => {
           </Input.Wrapper>
           <TextInput
             withAsterisk
-            label="Nome completo"
-            placeholder="Insira o seu nome completo"
-            key={form.key('complete_name')}
-            {...form.getInputProps('complete_name')}
+            label="E-mail"
+            placeholder="Insira o seu e-mail"
+            key={form.key('email')}
+            {...form.getInputProps('email')}
           />
         </FormSection>
-        <FormSection title="Informações de jogo">
+        <FormSection title="Informações de jogo" columns={{ xs: 2 }}>
           <TextInput
             withAsterisk
             label="Nome do personagem"
@@ -63,7 +70,7 @@ const RegistrationForm: React.FC = () => {
           />
           <SelectClass form={form} />
         </FormSection>
-        <FormSection title="Disponibilidade">
+        <FormSection title="Disponibilidade" columns={{ xs: 2 }}>
           <MultiSelect
             withAsterisk
             label="Disponibilidade de jogo"
@@ -79,7 +86,12 @@ const RegistrationForm: React.FC = () => {
             withAsterisk
             label={
               <Group align="center" gap={0}>
-                <Text>Disponibilidade para o 0800</Text>
+                <Text fz="sm" fw="500">
+                  Disponibilidade para o{' '}
+                  <Text span fz="sm" fw="bold">
+                    0800
+                  </Text>
+                </Text>
                 <Popover width={200} position="right" withArrow>
                   <Popover.Target>
                     <ActionIcon size="sm" variant="transparent">
