@@ -10,7 +10,7 @@ const Terms: React.FC = () => {
           📄 Termos de Uso e Política de Privacidade
         </Title>
         <Text fz="xs" fw="bold">
-          Última atualização: 17/05/2025
+          Última atualização: 20/05/2025
         </Text>
         <List
           type="ordered"
@@ -27,7 +27,8 @@ const Terms: React.FC = () => {
           </Text>
           <List withPadding spacing={0} fw="normal">
             <List.Item>Nome completo;</List.Item>
-            <List.Item>Número de WhatsApp.</List.Item>
+            <List.Item>Número de WhatsApp;</List.Item>
+            <List.Item>Endereço de e-mail.</List.Item>
           </List>
           <Text>
             Essas informações são fornecidas voluntariamente por você através do
@@ -73,7 +74,7 @@ const Terms: React.FC = () => {
           </List>
           <Text>
             Para exercer esses direitos, entre em contato conosco pelo e-mail:{' '}
-            <Anchor>skybr_pw@gmail.com</Anchor>.
+            <Anchor>contato@skybr-guild.com.br</Anchor>.
           </Text>
           <List.Item>Retenção dos Dados</List.Item>
           <Text>

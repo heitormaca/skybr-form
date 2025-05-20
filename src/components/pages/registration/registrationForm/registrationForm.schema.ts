@@ -1,11 +1,12 @@
 import { z } from 'zod'
 
 export const registrationFormSchema = z.object({
-  cellphone: z.string().min(19, 'Insira um número válido'),
   complete_name: z
     .string()
     .min(3, 'Insira um nome válido')
     .nonempty('Campo obrigatório'),
+  cellphone: z.string().min(19, 'Insira um número válido'),
+  email: z.string().email('Insira um e-mail válido'),
   nick_name: z.string().nonempty('Campo obrigatório'),
   class_name: z
     .string()

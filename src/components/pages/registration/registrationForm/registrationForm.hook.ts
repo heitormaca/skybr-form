@@ -11,8 +11,9 @@ export const useRegistrationForm = () => {
   const form = useForm<RegistrationFormPropsValues>({
     mode: 'uncontrolled',
     initialValues: {
-      cellphone: '',
       complete_name: '',
+      cellphone: '',
+      email: '',
       nick_name: '',
       class_name: '',
       game_availability: [],
