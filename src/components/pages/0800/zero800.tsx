@@ -7,10 +7,10 @@ const Zero800: React.FC = () => {
     <Container py="md">
       <Stack align="center">
         <Title ta="center" order={1}>
-          Empréstimo de personagem para o &quot;0800&quot;
+          🔒 Empréstimo de personagem para o &quot;0800&quot;
         </Title>
         <Text fz="xs" fw="bold">
-          Última atualização: 18/05/2025
+          Última atualização: 21/05/2025
         </Text>
         <Text>
           Emprestar o personagem para &quot;0800&quot; significa disponibilizar
@@ -25,7 +25,9 @@ const Zero800: React.FC = () => {
           , para participação em eventos de PvP, como TWs, GvGs, NW, entre
           outros.
         </Text>
-        <Title order={2}>Regras e procedimentos</Title>
+        <Title w="100%" order={2}>
+          📋 Regras e procedimentos
+        </Title>
         <List
           type="ordered"
           w="100%"
@@ -78,7 +80,9 @@ const Zero800: React.FC = () => {
             </ListItem>
           </List>
         </List>
-        <Title order={2}>Obervações importantes</Title>
+        <Title w="100%" order={2}>
+          ⚠️ Obervações importantes
+        </Title>
         <List
           withPadding
           type="ordered"
