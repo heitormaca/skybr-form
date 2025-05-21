@@ -13,8 +13,23 @@ import type { Metadata } from 'next'
 import '@mantine/core/styles.css'
 
 export const metadata: Metadata = {
-  title: 'Inscrição SkyBR',
-  description: 'Formulário de inscrição para o clã SkyBR',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
+  title: {
+    absolute: 'Inscrição • SkyBR',
+    default: 'SkyBR',
+    template: '%s • SkyBR',
+  },
+  description: 'Site oficial do clã SkyBR',
+  openGraph: {
+    images: [
+      {
+        url: '/assets/logotipo.png',
+        width: 250,
+        height: 215,
+        alt: 'Logotipo do clã SkyBR',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
