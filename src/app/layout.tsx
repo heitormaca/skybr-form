@@ -15,7 +15,6 @@ import '@mantine/core/styles.css'
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
   title: {
-    absolute: 'Inscrição • SkyBR',
     default: 'SkyBR',
     template: '%s • SkyBR',
   },
@@ -23,9 +22,9 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: '/assets/logotipo.png',
-        width: 250,
-        height: 215,
+        url: '/assets/logotipo_seo.png',
+        width: 512,
+        height: 512,
         alt: 'Logotipo do clã SkyBR',
       },
     ],
