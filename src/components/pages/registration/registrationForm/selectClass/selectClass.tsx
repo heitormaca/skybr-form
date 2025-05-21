@@ -109,7 +109,15 @@ const SelectClass: React.FC<SelectClassProps> = ({ form }) => {
                 <span>{selected.label}</span>
               </Group>
             ) : (
-              <Input.Placeholder>
+              <Input.Placeholder
+                w="100%"
+                display="block"
+                style={{
+                  whiteSpace: 'nowrap',
+                  overflow: 'hidden',
+                  textOverflow: 'clip',
+                }}
+              >
                 Selecione a classe do seu personagem
               </Input.Placeholder>
             )}
