@@ -162,8 +162,10 @@ const RegistrationForm: React.FC = () => {
             </Text>
           }
         />
-        <Group justify="flex-end">
-          <Button type="submit">Enviar</Button>
+        <Group justify="flex-end" w="100%">
+          <Button type="submit" w={{ base: '100%', xs: 'fit-content' }}>
+            Enviar
+          </Button>
         </Group>
       </SimpleGrid>
     </Box>
