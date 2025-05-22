@@ -122,7 +122,7 @@ const Registration: React.FC = () => {
         <Divider my="md" />
         <Stack gap="xs" w="100%">
           <Title order={3} w="100%">
-            🎁 Reconhecemos os Que Fazem a Diferença
+            🏆 Reconhecemos os Que Fazem a Diferença
           </Title>
           <Text ta="start" w="100%">
             No SkyBR, esforço e dedicação não passam despercebidos. Por isso,
