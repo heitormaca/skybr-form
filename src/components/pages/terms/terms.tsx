@@ -1,17 +1,19 @@
 'use client'
 
-import { Anchor, Container, List, Stack, Text, Title } from '@mantine/core'
+import { Anchor, Box, Container, List, Stack, Text, Title } from '@mantine/core'
 
 const Terms: React.FC = () => {
   return (
     <Container py="md">
-      <Stack align="center">
-        <Title ta="center" order={1}>
-          📄 Termos de Uso e Política de Privacidade
-        </Title>
-        <Text fz="xs" fw="bold">
-          Última atualização: 20/05/2025
-        </Text>
+      <Box>
+        <Stack gap="xs">
+          <Title ta="center" order={1}>
+            📄 Termos de Uso e Política de Privacidade
+          </Title>
+          <Text fz="xs" fw="bold" ta="center">
+            Última atualização: 21/05/2025
+          </Text>
+        </Stack>
         <List
           type="ordered"
           w="100%"
@@ -20,7 +22,7 @@ const Terms: React.FC = () => {
           fw="bold"
           pr={{ base: 'md', xs: 'sm' }}
         >
-          <List.Item>Coleta de Dados Pessoais</List.Item>
+          <List.Item>Coleta de dados pessoais</List.Item>
           <Text>
             Ao se inscrever no formulário de recrutamento do clã SkyBR,
             coletamos os seguintes dados pessoais:
@@ -34,7 +36,7 @@ const Terms: React.FC = () => {
             Essas informações são fornecidas voluntariamente por você através do
             formulário de inscrição.
           </Text>
-          <List.Item>Finalidade da Coleta</List.Item>
+          <List.Item>Finalidade da coleta</List.Item>
           <Text>Os dados coletados serão utilizados exclusivamente para:</Text>
           <List withPadding spacing={0} fw="normal">
             <List.Item>Comunicação entre os membros da guilda;</List.Item>
@@ -46,20 +48,20 @@ const Terms: React.FC = () => {
               Compartilhamento de informações relevantes sobre a guilda.
             </List.Item>
           </List>
-          <List.Item>Armazenamento e Segurança dos Dados</List.Item>
+          <List.Item>Armazenamento e segurança dos dados</List.Item>
           <Text>
             Seus dados serão armazenados de forma segura e acessíveis apenas
             pelos administradores da guilda. Implementamos medidas técnicas e
             organizacionais adequadas para proteger suas informações contra
             acesso não autorizado, divulgação ou destruição.
           </Text>
-          <List.Item>Compartilhamento de Dados</List.Item>
+          <List.Item>Compartilhamento de dados</List.Item>
           <Text>
             Não compartilharemos seus dados pessoais com terceiros sem seu
             consentimento prévio, exceto quando exigido por lei ou por
             autoridades competentes.
           </Text>
-          <List.Item>Direitos dos Titulares dos Dados</List.Item>
+          <List.Item>Direitos dos titulares dos dados</List.Item>
           <Text>De acordo com a LGPD, você tem o direito de:</Text>
           <List withPadding spacing={0} fw="normal">
             <List.Item>Acessar seus dados pessoais;</List.Item>
@@ -76,20 +78,20 @@ const Terms: React.FC = () => {
             Para exercer esses direitos, entre em contato conosco pelo e-mail:{' '}
             <Anchor>contato@skybr-guild.com.br</Anchor>.
           </Text>
-          <List.Item>Retenção dos Dados</List.Item>
+          <List.Item>Retenção dos dados</List.Item>
           <Text>
             Manteremos seus dados pessoais apenas pelo tempo necessário para
             cumprir as finalidades descritas nesta política, salvo se houver
             outra base legal que justifique sua conservação.
           </Text>
-          <List.Item>Alterações nesta Política</List.Item>
+          <List.Item>Alterações nesta política</List.Item>
           <Text>
             Podemos atualizar esta política periodicamente. Recomendamos que
             você reveja esta página regularmente para se manter informado sobre
             quaisquer alterações.
           </Text>
         </List>
-      </Stack>
+      </Box>
     </Container>
   )
 }
