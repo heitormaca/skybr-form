@@ -3,6 +3,8 @@ import {
   mantineHtmlProps,
   MantineProvider,
 } from '@mantine/core'
+import { ModalsProvider } from '@mantine/modals'
+import { Notifications } from '@mantine/notifications'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { theme } from '@/configs/mantine'
@@ -11,6 +13,7 @@ import QueryClientProvider from '@/providers'
 import type { Metadata } from 'next'
 
 import '@mantine/core/styles.css'
+import '@mantine/notifications/styles.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
@@ -56,7 +59,10 @@ export default function RootLayout({
             defaultColorScheme="dark"
             forceColorScheme="dark"
           >
-            {children}
+            <ModalsProvider>
+              <Notifications />
+              {children}
+            </ModalsProvider>
             <SpeedInsights />
           </MantineProvider>
         </QueryClientProvider>

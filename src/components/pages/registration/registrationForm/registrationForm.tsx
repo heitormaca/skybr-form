@@ -26,7 +26,14 @@ import FormSection from './formSection'
 import SelectClass from './selectClass'
 
 const RegistrationForm: React.FC = () => {
-  const { form, marginBottomOnError, handleSubmit } = useRegistrationForm()
+  const {
+    form,
+    isLoading,
+    selectedClass,
+    setSelectedClass,
+    marginBottomOnError,
+    handleSubmit,
+  } = useRegistrationForm()
 
   return (
     <Box component="form" w="100%" onSubmit={form.onSubmit(handleSubmit)}>
@@ -68,7 +75,11 @@ const RegistrationForm: React.FC = () => {
             key={form.key('nick_name')}
             {...form.getInputProps('nick_name')}
           />
-          <SelectClass form={form} />
+          <SelectClass
+            form={form}
+            value={selectedClass}
+            setValue={setSelectedClass}
+          />
         </FormSection>
         <FormSection title="Disponibilidade" columns={{ xs: 2 }}>
           <MultiSelect
@@ -163,7 +174,11 @@ const RegistrationForm: React.FC = () => {
           }
         />
         <Group justify="flex-end" w="100%">
-          <Button type="submit" w={{ base: '100%', xs: 'fit-content' }}>
+          <Button
+            type="submit"
+            w={{ base: '100%', xs: 'fit-content' }}
+            loading={isLoading}
+          >
             Enviar
           </Button>
         </Group>
