@@ -11,7 +11,7 @@ import {
   Text,
 } from '@mantine/core'
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 
 import { RegistrationFormPropsValues } from '../registrationForm.schema'
 import { selectData } from './selectClass.constants'
@@ -22,16 +22,14 @@ import s from './selectClass.module.css'
 
 export type SelectClassProps = {
   form: UseFormReturnType<RegistrationFormPropsValues>
+  value: string
+  setValue: Dispatch<SetStateAction<string>>
 }
 
-const SelectClass: React.FC<SelectClassProps> = ({ form }) => {
+const SelectClass: React.FC<SelectClassProps> = ({ form, value, setValue }) => {
   const combobox = useCombobox({
     onDropdownClose: () => combobox.resetSelectedOption(),
   })
-
-  const [value, setValue] = useState<string>(
-    form.getInputProps('class_name').defaultValue,
-  )
 
   const selected = selectData.find((g) => g.value === value)!
   const isError = form.getInputProps('class_name').error
