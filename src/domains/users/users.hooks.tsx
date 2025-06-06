@@ -11,14 +11,18 @@ import {
   Text,
   Title,
 } from '@mantine/core'
+import { useClipboard } from '@mantine/hooks'
 import { modals } from '@mantine/modals'
 import { notifications } from '@mantine/notifications'
 
 import { onboardUserCharacterAction } from './users.actions'
 
 import type { CreateUserCharacterDataProps } from './users.types'
+import Image from 'next/image'
 
 export const useCreateUserCharacter = () => {
+  const clipboard = useClipboard({ timeout: 2000 })
+
   const mutation = useMutation({
     mutationFn: (data: CreateUserCharacterDataProps) =>
       onboardUserCharacterAction(data),
@@ -45,6 +49,32 @@ export const useCreateUserCharacter = () => {
               Enquanto aguarda, una-se à nossa tropa nas redes sociais:
             </Text>
             <Stack>
+              <Group
+                gap="xs"
+                onClick={() => {
+                  clipboard.copy('ts3.skybr-guild.com.br:9215')
+                  notifications.show({
+                    title: 'Copiado',
+                    message:
+                      'Endereço do Teamspeak copiado para a área de transferência',
+                    color: 'green',
+                    autoClose: 3000,
+                  })
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                <ActionIcon>
+                  <Image
+                    src="/assets/icons/teamspeak.svg"
+                    alt="Ícone do teamspeak"
+                    width={24}
+                    height={24}
+                  />
+                </ActionIcon>
+                <Text span fw="bold" c="blue">
+                  Teamspeak 3
+                </Text>
+              </Group>
               <Anchor
                 component="a"
                 href={`${process.env.NEXT_PUBLIC_DISCORD_URL}`}
