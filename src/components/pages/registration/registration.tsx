@@ -9,8 +9,6 @@ import {
   Title,
 } from '@mantine/core'
 import Image from 'next/image'
-
-import RegistrationForm from './registrationForm'
 import Link from 'next/link'
 
 const Registration: React.FC = () => {
