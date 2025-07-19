@@ -9,8 +9,6 @@ import {
   Title,
 } from '@mantine/core'
 import Image from 'next/image'
-
-import RegistrationForm from './registrationForm'
 import Link from 'next/link'
 
 const Registration: React.FC = () => {
@@ -181,14 +179,22 @@ const Registration: React.FC = () => {
             <Text span fw="bold">
               formulário de inscrição
             </Text>{' '}
-            e dê o primeiro passo rumo à sua jornada no clã. Após essa triagem
-            inicial, entraremos em contato para uma breve entrevista. Estamos
-            ansiosos para conhecer você!
+            clicando{' '}
+            <Anchor
+              href="https://docs.google.com/forms/d/187f9b5M3ZhvhXOhLGh06Q_M2pORO3zD1sxXgT7ykTLI"
+              target="_blank"
+              underline="always"
+            >
+              aqui
+            </Anchor>{' '}
+            no link e dê o primeiro passo rumo à sua jornada no clã. Após essa
+            triagem inicial, entraremos em contato para uma breve entrevista.
+            Estamos ansiosos para conhecer você!
           </Text>
         </Stack>
-        <Box mt="xl">
+        {/* <Box mt="xl">
           <RegistrationForm />
-        </Box>
+        </Box> */}
       </Box>
     </Container>
   )
